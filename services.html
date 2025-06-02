@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - EventMasters</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .font-brand { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-[var(--bg-light)] text-[var(--text-light)]">
+
+    <div id="header-placeholder">
+        <!-- Header will be loaded here by JS -->
+        <div class="h-20 bg-transparent"></div> <!-- Placeholder height to prevent layout shift -->
+    </div>
+
+    <!-- Services Section -->
+    <main class="section-padding">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h1 class="text-4xl md:text-5xl font-brand font-semibold text-[var(--maroon)] mb-4">Our Comprehensive Services</h1>
+                <p class="text-lg max-w-3xl mx-auto">
+                    We offer a wide array of event planning and management services, designed to make your special occasions truly memorable. Explore what we can do for you.
+                </p>
+            </div>
+
+            <!-- Service: Wedding Planning -->
+            <section class="mb-16 reveal">
+                <div class="flex flex-col md:flex-row items-center gap-8 card p-6 md:p-8 rounded-xl shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1592359193612-c94358067ba8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Wedding Planning" class="w-full md:w-1/3 h-64 object-cover rounded-lg shadow-md">
+                    <div class="md:w-2/3">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">💍</span> <!-- Icon -->
+                            <h2 class="text-3xl font-semibold text-[var(--maroon)] font-brand">Wedding Planning</h2>
+                        </div>
+                        <p class="mb-4 text-lg">
+                            From grand traditional Indian weddings to intimate destination ceremonies, we handle every detail. Our services include venue selection, vendor management, decor conceptualization, guest hospitality, and on-the-day coordination, ensuring a stress-free and magical experience for you and your loved ones.
+                        </p>
+                        <a href="booking.html?event_type=wedding" class="btn-secondary px-6 py-2 rounded-md text-sm">Enquire for Weddings</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Service: Birthday & Anniversary Parties -->
+            <section class="mb-16 reveal">
+                 <div class="flex flex-col md:flex-row-reverse items-center gap-8 card p-6 md:p-8 rounded-xl shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Birthday Party" class="w-full md:w-1/3 h-64 object-cover rounded-lg shadow-md">
+                    <div class="md:w-2/3">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">🎉</span> <!-- Icon -->
+                            <h2 class="text-3xl font-semibold text-[var(--maroon)] font-brand">Birthday & Anniversary Parties</h2>
+                        </div>
+                        <p class="mb-4 text-lg">
+                            Celebrate life's milestones with flair! We organize themed birthday parties for all ages, elegant anniversary celebrations, and other social gatherings. We take care of entertainment, catering, decorations, and all the little touches that make a party unforgettable.
+                        </p>
+                        <a href="booking.html?event_type=party" class="btn-secondary px-6 py-2 rounded-md text-sm">Plan Your Party</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Service: Corporate Events -->
+            <section class="mb-16 reveal">
+                <div class="flex flex-col md:flex-row items-center gap-8 card p-6 md:p-8 rounded-xl shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Corporate Event" class="w-full md:w-1/3 h-64 object-cover rounded-lg shadow-md">
+                    <div class="md:w-2/3">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">💼</span> <!-- Icon -->
+                            <h2 class="text-3xl font-semibold text-[var(--maroon)] font-brand">Corporate Events</h2>
+                        </div>
+                        <p class="mb-4 text-lg">
+                            Impress your clients and motivate your team with professionally managed corporate events. We specialize in conferences, seminars, product launches, award ceremonies, and team-building activities. Our focus is on seamless execution, brand alignment, and achieving your business objectives.
+                        </p>
+                        <a href="booking.html?event_type=corporate" class="btn-secondary px-6 py-2 rounded-md text-sm">Organize Corporate Event</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Service: Decoration & Catering -->
+            <section class="mb-16 reveal">
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8 card p-6 md:p-8 rounded-xl shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1600910790595-a008a0eb49f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Event Decoration" class="w-full md:w-1/3 h-64 object-cover rounded-lg shadow-md">
+                    <div class="md:w-2/3">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">🌸🍽️</span> <!-- Icons -->
+                            <h2 class="text-3xl font-semibold text-[var(--maroon)] font-brand">Decoration & Catering</h2>
+                        </div>
+                        <p class="mb-4 text-lg">
+                            Elevate your event with stunning decorations and delectable cuisine. We offer bespoke decor services, from traditional Indian themes to contemporary designs, including floral arrangements, lighting, and stage setups. Our catering partners provide diverse menus to suit every palate, ensuring a delightful culinary experience.
+                        </p>
+                        <a href="booking.html?event_type=decor_catering" class="btn-secondary px-6 py-2 rounded-md text-sm">Get a Decor/Catering Quote</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-placeholder">
+        <!-- Footer will be loaded here by JS -->
+        <div class="py-12 bg-gray-800 dark:bg-gray-900"></div> <!-- Placeholder height & bg -->
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919876543210?text=Hello!%20I'm%20interested%20in%20your%20event%20services." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32"><path d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.044-.53-.044-.33 0-.545.015-.765.315-.22.29-.79.787-.79 1.838 0 1.06.79 2.16 1.729 3.252.27.304 1.16 1.804 2.739 2.487 2.16 1.002 2.35 1.09.943.604 1.554-.373 2.426-1.223 2.67-1.66.24-.42.143-.66-.043-.78z M16 4C9.371 4 4 9.371 4 16c0 6.629 5.371 12 12 12 1.575 0 3.08-.315 4.465-.882L26 28.118l-2.015-5.42A11.934 11.934 0 0 0 28 16c0-6.629-5.371-12-12-12zm0 2a10 10 0 0 1 10 10c0 2.06-.615 3.98-1.685 5.608L22.63 24.23 24.23 22.63l-2.622-1.296A9.934 9.934 0 0 1 26 16a10 10 0 0 1-10 10c-5.523 0-10-4.477-10-10S10.477 6 16 6z"></path></svg>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

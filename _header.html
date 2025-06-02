@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <!-- _header.html -->
+<header class="bg-[var(--card-bg-light)] text-[var(--text-light)] shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold text-[var(--maroon)] font-brand">Sawariya Events </a>
+                <!-- Optional Logo: <img src="images/logo.png" alt="Logo" class="h-10"> -->
+            </div>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="hover:text-[var(--gold)] transition-colors" data-navlink="index.html">Home</a>
+                <a href="services.html" class="hover:text-[var(--gold)] transition-colors" data-navlink="services.html">Services</a>
+                <a href="gallery.html" class="hover:text-[var(--gold)] transition-colors" data-navlink="gallery.html">Gallery</a>
+                <a href="booking.html" class="btn-primary px-4 py-2 rounded-md text-sm" data-navlink="booking.html">Book Now</a>
+                <button id="themeToggleButton" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700" title="Toggle Theme">
+                    <!-- Icon will be injected by JS -->
+                </button>
+            </nav>
+            <div class="md:hidden flex items-center">
+                 <button id="themeToggleButtonMobile" class="p-2 mr-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 theme-toggle-btn-mobile" title="Toggle Theme">
+                    <!-- Icon will be injected by JS, same as desktop -->
+                </button>
+                <button id="mobileMenuButton" class="text-[var(--text-light)] focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-[var(--card-bg-light)] shadow-lg">
+        <a href="index.html" class="block px-4 py-3 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-navlink="index.html">Home</a>
+        <a href="services.html" class="block px-4 py-3 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-navlink="services.html">Services</a>
+        <a href="gallery.html" class="block px-4 py-3 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-navlink="gallery.html">Gallery</a>
+        <a href="booking.html" class="block px-4 py-3 text-sm text-[var(--maroon)] font-semibold hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-navlink="booking.html">Book Now</a>
+    </div>
+</header>
+</body>
+
+</html>

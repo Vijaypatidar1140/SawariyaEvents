@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="dark"> <!-- Admin usually better in dark -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Event Bookings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Ensure table text is visible in dark/light mode */
+        table th, table td {
+            border-color: var(--border-light);
+            color: var(--text-light);
+        }
+        #adminContent { display: none; } /* Hidden by default */
+    </style>
+</head>
+<body class="bg-[var(--bg-light)] text-[var(--text-light)] min-h-screen">
+    <div id="adminContent" class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl sm:text-3xl font-semibold text-[var(--maroon)]">Event Booking Submissions</h1>
+            <button id="themeToggleButton" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700" title="Toggle Theme"></button>
+        </div>
+        
+        <div class="mb-6 card p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-3 text-[var(--gold)]">Load Data from Google Sheets</h2>
+            <p class="text-sm mb-3">
+                1. Open your Google Sheet containing Formsubmit data. <br>
+                2. Select all data (Ctrl+A or Cmd+A), including headers. <br>
+                3. Copy the data (Ctrl+C or Cmd+C). <br>
+                4. Paste it into the text area below (Ctrl+V or Cmd+V). <br>
+                5. Click "Load Data".
+            </p>
+            <textarea id="csvData" rows="8" class="w-full p-3 border border-[var(--border-light)] rounded-md shadow-sm bg-transparent focus:ring-[var(--maroon)] focus:border-[var(--maroon)]" placeholder="Paste CSV data here..."></textarea>
+            <div class="mt-4 flex gap-4">
+                <button id="loadDataButton" class="btn-primary px-5 py-2 rounded-md">Load Data</button>
+                <button id="downloadCsvButton" class="btn-secondary px-5 py-2 rounded-md hidden">Download CSV</button>
+            </div>
+        </div>
+
+        <div class="overflow-x-auto card p-0 rounded-lg shadow-md">
+            <table class="min-w-full divide-y divide-[var(--border-light)]">
+                <thead class="bg-gray-50 dark:bg-gray-700">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Name</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Phone</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Email</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Event Type</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Event Date</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Location</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Message</th>
+                    </tr>
+                </thead>
+                <tbody id="dataTableBody" class="divide-y divide-[var(--border-light)]">
+                    <!-- Data will be inserted here by JavaScript -->
+                    <tr><td colspan="7" class="px-6 py-10 text-center text-gray-500">No data loaded yet. Paste CSV above.</td></tr>
+                </tbody>
+            </table>
+        </div>
+         <p class="text-xs text-center mt-8 text-gray-500">Admin Dashboard v1.0</p>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

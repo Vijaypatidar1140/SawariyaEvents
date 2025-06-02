@@ -1,0 +1,107 @@
+
+event-management-website/
+├── index.html # Home Page
+├── services.html # Services Page
+├── gallery.html # Gallery Page
+├── booking.html # Booking Form / Contact Page
+├── thankyou.html # Optional: Thank You page after form submission
+├── admin.html # Admin Dashboard (password protected)
+│
+├── css/
+│ └── style.css # Custom CSS (theming, animations, lightbox, WhatsApp button)
+│
+├── js/
+│ ├── main.js # JavaScript for public pages (theme, nav, email protection, animations, gallery, etc.)
+│ └── admin.js # JavaScript for Admin Dashboard (password, data display, CSV download)
+│
+└── images/
+├── hero-bg.jpg # Background image for the Hero section
+├── logo.png # Optional: Your business logo
+│
+├── wedding-planning-service.jpg # Image for Wedding Planning service section
+├── party-service.jpg # Image for Birthday & Anniversary Parties service section
+├── corporate-event-service.jpg # Image for Corporate Events service section
+├── decor-catering-service.jpg # Image for Decoration & Catering service section
+│
+├── gallery-wedding-01.jpg # Example gallery image (Wedding)
+├── gallery-wedding-02.jpg # Example gallery image (Wedding)
+├── gallery-party-01.jpg # Example gallery image (Party)
+├── gallery-party-02.jpg # Example gallery image (Party)
+├── gallery-corporate-01.jpg # Example gallery image (Corporate)
+├── gallery-decor-01.jpg # Example gallery image (Decor)
+├── (add_more_gallery_images_here.jpg) # Placeholder for more gallery images
+│
+└── icons/ # Optional: If you use external SVG/PNG icons
+├── wedding-icon.svg # Icon for wedding service
+├── party-icon.svg # Icon for party service
+├── corporate-icon.svg # Icon for corporate service
+├── decor-icon.svg # Icon for decor service
+├── catering-icon.svg # Icon for catering service
+├── sun-icon.svg # Icon for light mode toggle (if not embedded)
+├── moon-icon.svg # Icon for dark mode toggle (if not embedded)
+├── whatsapp-icon.svg # Icon for WhatsApp button (if not embedded)
+
+
+Explanation of Key Components:
+
+Root Directory (event-management-website/): Contains all the main HTML pages of your website.
+
+index.html: The landing page (Home Page).
+
+services.html: Details the different services offered.
+
+gallery.html: Showcases event photos.
+
+booking.html: Contains the contact/booking form.
+
+thankyou.html: A page to redirect users after successful form submission.
+
+admin.html: The password-protected dashboard for viewing submitted data.
+
+css/style.css: Your custom stylesheet. While TailwindCSS is used via CDN, this file will hold:
+
+Theme color definitions (CSS variables for maroon, gold, ivory).
+
+Dark/Light mode base styles.
+
+Specific styles for elements like the lightbox, WhatsApp button, and custom animations (reveal class).
+
+Any minor overrides or additions to Tailwind.
+
+js/main.js: Handles all client-side JavaScript for the public-facing pages:
+
+Dark/Light mode toggle functionality.
+
+Mobile navigation menu toggle.
+
+JavaScript rendering of email and phone numbers for protection.
+
+Scroll-triggered animations.
+
+Gallery lightbox functionality.
+
+Gallery filtering logic.
+
+js/admin.js: Contains JavaScript specific to the admin.html page:
+
+Password prompt for access.
+
+Loading and parsing pasted CSV data from Google Sheets.
+
+Dynamically populating the HTML table with data.
+
+"Download CSV" functionality.
+
+Theme toggle for the admin page.
+
+images/: Stores all your visual assets:
+
+General images like hero-bg.jpg and logo.png.
+
+Specific images for each service description.
+
+A collection of images for the gallery page (you can name them descriptively, e.g., indian-wedding-mandap.jpg, corporate-seminar-setup.jpg).
+
+images/icons/ (Sub-folder): If you decide to use separate image files for icons (e.g., SVGs or PNGs for services, theme toggle, etc.) instead of embedding SVGs directly in HTML/JS or using emoji. Many icons (like theme toggle, WhatsApp) in the provided code are embedded SVGs for fewer HTTP requests, but having this folder is good practice if you have many custom graphical icons.
+
+This structure provides a clean and organized way to manage your website's files, making development and maintenance easier. Remember to replace placeholder image names with your actual, high-quality event photos.

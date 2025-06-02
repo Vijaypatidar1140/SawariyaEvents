@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Event - EventMasters</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .font-brand { font-family: 'Playfair Display', serif; }
+        .form-input:focus + .form-label,
+        .form-input:not(:placeholder-shown) + .form-label {
+            transform: translateY(-1.125rem) translateX(-0.125rem) scale(0.8);
+            color: var(--maroon);
+            background-color: var(--bg-light);
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+        }
+        html.dark .card .form-input:focus + .form-label,
+        html.dark .card .form-input:not(:placeholder-shown) + .form-label {
+             background-color: var(--card-bg-dark);
+        }
+        html.dark body > main .form-input:focus + .form-label,
+        html.dark body > main .form-input:not(:placeholder-shown) + .form-label {
+             background-color: var(--bg-dark);
+        }
+        .form-label { transition: all 0.2s ease-out; }
+        select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            -webkit-appearance: none; -moz-appearance: none; appearance: none;
+        }
+        html.dark select {
+             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        }
+        /* Submission status message styling */
+        #form-status { margin-top: 1rem; text-align: center; }
+        .status-success { color: green; }
+        .status-error { color: red; }
+    </style>
+</head>
+<body class="bg-[var(--bg-light)] text-[var(--text-light)]">
+
+    <div id="header-placeholder">
+        <div class="h-20 bg-transparent"></div>
+    </div>
+
+    <main class="section-padding">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto card p-8 md:p-12 rounded-xl shadow-2xl reveal">
+                <div class="text-center mb-10">
+                    <h1 class="text-3xl md:text-4xl font-brand font-semibold text-[var(--maroon)] mb-3">Let's Plan Your Event</h1>
+                    <p class="text-lg">Fill out the form below, and our team will get in touch with you shortly.</p>
+                </div>
+
+                <!-- The form will be handled by JavaScript -->
+                <form id="eventBookingForm">
+                    <!-- Name (Required) -->
+                    <div class="relative mb-6">
+                        <input type="text" id="name" name="Name" class="form-input block w-full px-3 py-3 text-base text-[var(--text-light)] bg-transparent border border-[var(--border-light)] rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--maroon)] focus:border-[var(--maroon)] placeholder-transparent" placeholder="Full Name" required>
+                        <label for="name" class="form-label absolute left-3 top-3.5 text-gray-500 dark:text-gray-400 text-base pointer-events-none">Full Name *</label>
+                    </div>
+
+                    <!-- Phone (Required) -->
+                    <div class="relative mb-6">
+                        <input type="tel" id="phone" name="Phone" class="form-input block w-full px-3 py-3 text-base text-[var(--text-light)] bg-transparent border border-[var(--border-light)] rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--maroon)] focus:border-[var(--maroon)] placeholder-transparent" placeholder="Phone Number" required>
+                        <label for="phone" class="form-label absolute left-3 top-3.5 text-gray-500 dark:text-gray-400 text-base pointer-events-none">Phone Number *</label>
+                    </div>
+
+                    <!-- Email (Optional) -->
+                    <div class="relative mb-6">
+                        <input type="email" id="email" name="Email" class="form-input block w-full px-3 py-3 text-base text-[var(--text-light)] bg-transparent border border-[var(--border-light)] rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--maroon)] focus:border-[var(--maroon)] placeholder-transparent" placeholder="Email Address">
+                        <label for="email" class="form-label absolute left-3 top-3.5 text-gray-500 dark:text-gray-400 text-base pointer-events-none">Email Address</label>
+                    </div>
+                    
+                    <!-- Event Type (Dropdown) -->
+                    <div class="relative mb-6">
+                        <label for="eventType" class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">Event Type *</label>
+                        <select id="eventType" name="EventType" class="form-input block w-full px-3 py-3 text-base text-[var(--text-light)] bg-[var(--card-bg-light)] border border-[var(--border-light)] rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--maroon)] focus:border-[var(--maroon)]" required>
+                            <option value="" disabled selected>Select Event Type</option>
+                            <option value="wedding">Wedding Planning</option>
+                            <option value="party">Birthday / Anniversary Party</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="decor_catering">Decoration & Catering</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Event Date -->
+                    <div class="relative mb-6">
+                        <label for="eventDate" class="block text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">Preferred Event Date</label>
+                        <input type="date" id="eventDate" name="EventDate" class="form-input block w-full px-3 py-3 text-base text-[var(--text-light)] bg-transparent border border-[var(--border-light)] rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--maroon)] focus:border-[var(--maroon)] placeholder-gray-500 dark:placeholder-gray-400 text-[var(--text-light)]" style="color-scheme: dark;" placeholder=" ">
+                    </div>
+                    
+                    <!-- Location -->
+                    <div class="relative mb-6">
+                        <input type="text" id="location" name="Location" class="form-input block w-full px-3 py-3 text-base text-[var(--text-light)] bg-transparent border border-[var(--border-light)] rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--maroon)] focus:border-[var(--maroon)] placeholder-transparent" placeholder="Event Location / City">
+                        <label for="location" class="form-label absolute left-3 top-3.5 text-gray-500 dark:text-gray-400 text-base pointer-events-none">Event Location / City</label>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="relative mb-6">
+                        <textarea id="message" name="Message" rows="4" class="form-input block w-full px-3 py-3 text-base text-[var(--text-light)] bg-transparent border border-[var(--border-light)] rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-[var(--maroon)] focus:border-[var(--maroon)] placeholder-transparent" placeholder="Your Message / Requirements"></textarea>
+                        <label for="message" class="form-label absolute left-3 top-3.5 text-gray-500 dark:text-gray-400 text-base pointer-events-none">Your Message / Requirements</label>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" id="submitButton" class="btn-primary w-full sm:w-auto text-lg px-10 py-3 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            Send Inquiry
+                        </button>
+                    </div>
+                    <div id="form-status"></div> <!-- For showing submission status -->
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder">
+        <div class="py-12 bg-gray-800 dark:bg-gray-900"></div>
+    </div>
+
+    <a href="https://wa.me/919876543210?text=Hello!%20I'm%20interested%20in%20your%20event%20services." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32"><path d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.044-.53-.044-.33 0-.545.015-.765.315-.22.29-.79.787-.79 1.838 0 1.06.79 2.16 1.729 3.252.27.304 1.16 1.804 2.739 2.487 2.16 1.002 2.35 1.09.943.604 1.554-.373 2.426-1.223 2.67-1.66.24-.42.143-.66-.043-.78z M16 4C9.371 4 4 9.371 4 16c0 6.629 5.371 12 12 12 1.575 0 3.08-.315 4.465-.882L26 28.118l-2.015-5.42A11.934 11.934 0 0 0 28 16c0-6.629-5.371-12-12-12zm0 2a10 10 0 0 1 10 10c0 2.06-.615 3.98-1.685 5.608L22.63 24.23 24.23 22.63l-2.622-1.296A9.934 9.934 0 0 1 26 16a10 10 0 0 1-10 10c-5.523 0-10-4.477-10-10S10.477 6 16 6z"></path></svg>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+        // JavaScript for handling form submission to Google Apps Script
+        const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE'; // <--- PASTE YOUR WEB APP URL HERE
+        const form = document.getElementById('eventBookingForm');
+        const submitButton = document.getElementById('submitButton');
+        const formStatus = document.getElementById('form-status');
+        const thankYouPageURL = 'thankyou.html'; // Relative path to your thank you page
+
+        if (form) {
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                submitButton.disabled = true;
+                submitButton.textContent = 'Submitting...';
+                formStatus.textContent = ''; // Clear previous status
+
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => response.json()) // Assuming Apps Script returns JSON
+                    .then(data => {
+                        if (data.result === "success") {
+                            formStatus.textContent = 'Inquiry sent successfully!';
+                            formStatus.className = 'status-success';
+                            form.reset();
+                            // Redirect to thank you page after a short delay
+                            setTimeout(() => {
+                                window.location.href = thankYouPageURL;
+                            }, 1500);
+                        } else {
+                            throw new Error(data.message || 'Unknown error from server.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        formStatus.textContent = 'Error sending inquiry: ' + error.message;
+                        formStatus.className = 'status-error';
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Send Inquiry';
+                    });
+            });
+        }
+
+        // This part for pre-filling event type can be moved to main.js if preferred
+        // It's part of initializeBookingFormExtras() in the full main.js
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const eventTypeFromUrl = urlParams.get('event_type');
+            const eventTypeSelect = document.getElementById('eventType');
+            if (eventTypeFromUrl && eventTypeSelect) {
+                eventTypeSelect.value = eventTypeFromUrl;
+            }
+        });
+    </script>
+</body>
+</html>

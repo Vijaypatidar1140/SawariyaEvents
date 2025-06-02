@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Masters - We Turn Moments Into Memories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .hero-section {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); /* Replace with your hero image */
+            background-size: cover;
+            background-position: center;
+        }
+        .font-brand { font-family: 'Playfair Display', serif; }
+        .event-card { /* Styles for cards loaded from Google Sheet */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+        /* Dark mode hover for event card already covered by general card styles if using the 'card' class */
+    </style>
+</head>
+<body class="bg-[var(--bg-light)] text-[var(--text-light)]">
+
+    <div id="header-placeholder">
+        <div class="h-20 bg-transparent"></div> <!-- Placeholder height to prevent layout shift -->
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section h-[80vh] md:h-[90vh] flex items-center justify-center text-center text-white reveal">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-brand font-bold mb-6 text-shadow-lg animate-fade-in-down">
+                We Turn <span class="text-[var(--gold)]">Moments</span> Into <span class="text-[var(--gold)]">Memories</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto animate-fade-in-up delay-200">
+                Crafting unforgettable weddings, vibrant parties, and seamless corporate events with exquisite decor across India.
+            </p>
+            <a href="booking.html" class="btn-primary text-lg px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in-up delay-400">
+                Plan Your Event
+            </a>
+        </div>
+    </section>
+
+    <!-- About Services Section -->
+    <section class="section-padding bg-[var(--bg-light)] text-[var(--text-light)]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-brand font-semibold text-[var(--maroon)] mb-4">Our Expertise</h2>
+                <p class="text-lg max-w-2xl mx-auto">
+                    From intimate gatherings to grand celebrations, we provide end-to-end event management services tailored to your vision.
+                    Our passion is creating experiences that reflect your style and leave a lasting impression.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300 reveal">
+                    <div class="text-4xl text-[var(--maroon)] mb-4">💍</div>
+                    <h3 class="text-xl font-semibold mb-2">Wedding Planning</h3>
+                    <p class="text-sm">Dream weddings brought to life with meticulous planning and flawless execution.</p>
+                </div>
+                <div class="card p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300 reveal" style="animation-delay: 0.2s;">
+                    <div class="text-4xl text-[var(--maroon)] mb-4">🎉</div>
+                    <h3 class="text-xl font-semibold mb-2">Parties & Celebrations</h3>
+                    <p class="text-sm">Vibrant birthday bashes, elegant anniversaries, and joyous social gatherings.</p>
+                </div>
+                <div class="card p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300 reveal" style="animation-delay: 0.4s;">
+                    <div class="text-4xl text-[var(--maroon)] mb-4">💼</div>
+                    <h3 class="text-xl font-semibold mb-2">Corporate Events</h3>
+                    <p class="text-sm">Professional conferences, product launches, and engaging team-building events.</p>
+                </div>
+                <div class="card p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300 reveal" style="animation-delay: 0.6s;">
+                    <div class="text-4xl text-[var(--maroon)] mb-4">🌸</div>
+                    <h3 class="text-xl font-semibold mb-2">Decor & Styling</h3>
+                    <p class="text-sm">Transforming venues with stunning decor themes and artistic floral arrangements.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12 reveal">
+                <a href="services.html" class="btn-secondary px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    Explore All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Gallery Preview -->
+    <section class="section-padding bg-gray-100 dark:bg-gray-800 text-[var(--text-light)]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-brand font-semibold text-[var(--maroon)] mb-4">Glimpses of Our Work</h2>
+                <p class="text-lg max-w-2xl mx-auto">
+                    A sneak peek into the magical moments we've helped create.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="reveal"><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Wedding Decor" class="rounded-lg shadow-md aspect-square object-cover hover:scale-105 transition-transform duration-300"></div>
+                <div class="reveal" style="animation-delay: 0.1s;"><img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Party Atmosphere" class="rounded-lg shadow-md aspect-square object-cover hover:scale-105 transition-transform duration-300"></div>
+                <div class="reveal" style="animation-delay: 0.2s;"><img src="https://images.unsplash.com/photo-1607293823064-39530599eb7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Corporate Event Setup" class="rounded-lg shadow-md aspect-square object-cover hover:scale-105 transition-transform duration-300"></div>
+                <div class="reveal" style="animation-delay: 0.3s;"><img src="https://images.unsplash.com/photo-1542641803-979Ea169122c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Elegant Table Setting" class="rounded-lg shadow-md aspect-square object-cover hover:scale-105 transition-transform duration-300"></div>
+            </div>
+            <div class="text-center mt-12 reveal">
+                <a href="gallery.html" class="btn-secondary px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    View Full Gallery
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================================================== -->
+    <!-- VVVVVVVVVVVVVVVVVVVV  THIS IS THE NEW SECTION TO ADD/EDIT VVVVVVVVVVVVVVVVVVVVVVVVVVV -->
+    <section id="upcoming-events-section" class="section-padding bg-[var(--bg-light)] text-[var(--text-light)]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-brand font-semibold text-[var(--maroon)] mb-4">Our Public Engagements</h2>
+                <p class="text-lg max-w-2xl mx-auto">
+                    Check out some of the public events we are involved with!
+                </p>
+            </div>
+            <div id="events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event cards will be loaded here by JS -->
+                <p id="events-loading-message" class="col-span-full text-center text-gray-500 dark:text-gray-400">Loading events...</p>
+            </div>
+        </div>
+    </section>
+    <!-- ^^^^^^^^^^^^^^^^^^^^^^  THIS IS THE NEW SECTION TO ADD/EDIT ^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+    <!-- ==================================================================================== -->
+
+
+    <div id="footer-placeholder">
+        <div class="py-12 bg-gray-800 dark:bg-gray-900"></div> <!-- Placeholder height & bg -->
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/7049593447?text=Hello!%20I'm%20interested%20in%20your%20event%20services." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32"><path d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.044-.53-.044-.33 0-.545.015-.765.315-.22.29-.79.787-.79 1.838 0 1.06.79 2.16 1.729 3.252.27.304 1.16 1.804 2.739 2.487 2.16 1.002 2.35 1.09.943.604 1.554-.373 2.426-1.223 2.67-1.66.24-.42.143-.66-.043-.78z M16 4C9.371 4 4 9.371 4 16c0 6.629 5.371 12 12 12 1.575 0 3.08-.315 4.465-.882L26 28.118l-2.015-5.42A11.934 11.934 0 0 0 28 16c0-6.629-5.371-12-12-12zm0 2a10 10 0 0 1 10 10c0 2.06-.615 3.98-1.685 5.608L22.63 24.23 24.23 22.63l-2.622-1.296A9.934 9.934 0 0 1 26 16a10 10 0 0 1-10 10c-5.523 0-10-4.477-10-10S10.477 6 16 6z"></path></svg>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
